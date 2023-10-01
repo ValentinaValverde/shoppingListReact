@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import { useState } from 'react'
 
 export const MyForm = () => {
     const [itemList, setItemList] = useState([]);
@@ -16,23 +16,39 @@ export const MyForm = () => {
 
     return (
         <>
-            <h1>Shopping List</h1>
-            <form onSubmit={handleSubmit} >
-                <label> What do you need?
-                    <br />
-                    <input type="text" onChange={(event) => {setValue(event.target.value)}} />
-                    <br />
-                </label>
-                <br />
-                <button type="submit">Generate List</button>
-            </form>
+            <style>
+                @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Young+Serif&display=swap');
+            </style>
 
-            <br />
 
-            <label> List: </label>
-                {itemList.map((item, index) => 
-                <li key={index}>{item}</li>)}
-  
+            <div className='container'>
+                <div className='leftSide'>
+                    <h1>cart.</h1>
+                    <form onSubmit={handleSubmit} >
+                        <label> What do you need?
+                            <br />
+                            <input type="text" onChange={(event) => { setValue(event.target.value) }} />
+                            <br />
+                        </label>
+                        <button type="submit">add to list</button>
+                    </form>
+                    <form>
+                        <button type="submit">reset</button>
+                    </form>
+
+                </div>
+
+                <div className='list'>
+                    <h2>List</h2>
+                    <div className='output'>
+                        {itemList.map((item, index) =>
+                            <li key={index}>{item}</li>
+                            )}
+                    </div>
+                </div>
+            </div>
+
+
         </>
     )
 }

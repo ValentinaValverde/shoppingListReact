@@ -6,6 +6,61 @@
 }
 
 body{
-  background: black;
+  width: 100%;
+  background: #e8eddf;
+  color: black;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 20px;
+}
+
+h1{
+  font-size: 200px;
+  margin: 10px;
+  font-family: 'Young Serif', serif;
+  color: #136f63;
+}
+
+button{
+  width: 200px;
+  height: 30px;
+  margin-top: 10px;
+  cursor: pointer;
+  background-color: #136f63;
   color: white;
+}
+
+input{
+  width: 200px;
+  height: 30px;
+  margin-top: 10px;
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.leftSide{
+  width: 40vw;
+  text-align: left;
+  padding: 20px;
+}
+
+.list{
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  padding: 10px;
+  background-image: url("https://images.pexels.com/photos/10526880/pexels-photo-10526880.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+  box-shadow: 10px 10px 20px black;
+}
+
+.output{
+  text-align: left;
+  padding-left: 100px;
+  margin-bottom: 20px;
 }
